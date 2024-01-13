@@ -1,8 +1,5 @@
 # LLM-Lean
 
-LLM tools for Lean
-
-### Using LLM-Lean in a project
 Add to lakefile:
 ```lean
 require llmlean from git
@@ -16,6 +13,7 @@ import LLMlean
 
 Set `LLMLEAN_KEY` environment variable. In VSCode, press `command ,` and find `Lean4: Server Env`.
 
+---
 ### `llmstep` tactic
 Next-tactic suggestions via `llmstep "{prefix}"`, where `{prefix}` is arbitrary. Examples:
 
