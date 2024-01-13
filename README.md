@@ -11,7 +11,7 @@ Import:
 import LLMlean
 ```
 
-Set `LLMLEAN_KEY` and `LLMLEAN_URL` environment variables. In VSCode, press `command ,` and find `Lean4: Server Env`.
+Set `LLMLEAN_KEY` and `LLMLEAN_URL` environment variables. In VSCode, press `command ,` and find `Server Env`.
 
 ---
 ### `llmstep` tactic
