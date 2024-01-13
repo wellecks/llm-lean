@@ -14,7 +14,7 @@ Import:
 import LLMlean
 ```
 
-Set `LLMLEAN_KEY` environment variable. In VSCode, press `command ,`
+Set the `LLMLEAN_KEY` environment variable. 
 
 ### `llmstep` tactic
 Next-tactic suggestions via `llmstep "{prefix}"`, where `{prefix}` is arbitrary. Examples:

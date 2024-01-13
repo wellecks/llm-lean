@@ -1,7 +1,7 @@
 /- Utilities for interacting with LLMlean API endpoints.
 
 Acknowledgements:
-  Adapted from LeanCopilot's External.lean
+  Based on LeanCopilot's External.lean
     https://github.com/lean-dojo/LeanCopilot/blob/
     dd2c0c2b31fef6545654acfc82960aa59ed79e5a/
     LeanCopilot/Models/External.lean
@@ -15,7 +15,7 @@ structure API where
   model : String
   baseUrl : String
   key : String
-  tacticGenerationEndpoint : String := "/"
+  tacticGenerationEndpoint : String := "/tactic"
 deriving Inhabited, Repr
 
 structure TacticGenerationRequest where
@@ -27,7 +27,7 @@ structure TacticGenerationRequest where
 deriving ToJson
 
 structure TacticGenerationResponse where
-  suggestions : Array String
+  outputs: Array (String × Float)
 deriving FromJson
 
 
@@ -61,7 +61,7 @@ def API.tacticGeneration
     «prefix» := «prefix»
   }
   let res : TacticGenerationResponse ← post req url
-  return res.suggestions.map fun x => (x, 0.0)
+  return res.outputs
 
 
 end LLMlean
