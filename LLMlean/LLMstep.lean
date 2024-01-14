@@ -25,7 +25,6 @@ def getAPI : IO API := do
     }
     return api
 
-/- Calls a `suggest.py` python script with the given prefix and pretty-printed goal. -/
 def runSuggest (goal pre ctx: String) : IO (Array (String × Float)) := do
   let api ← getAPI
   let s ← api.tacticGeneration goal ctx pre
