@@ -3,7 +3,7 @@
 Add to lakefile:
 ```lean
 require llmlean from git
-  "git@github.com:wellecks/llm-lean.git"
+  "https://github.com/wellecks/llm-lean.git"
 ```
 
 Import:
